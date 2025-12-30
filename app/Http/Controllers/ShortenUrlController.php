@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\ShortenedUrl;
-use Illuminate\Http\Request;
 
 class ShortenUrlController extends Controller
 {
