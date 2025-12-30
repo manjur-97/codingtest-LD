@@ -11,6 +11,9 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/users/list', [DashboardController::class, 'getUsers'])->name('users.list');
+    Route::get('/users/{id}', [DashboardController::class, 'getUser'])->name('users.get');
+    Route::post('/users/update', [DashboardController::class, 'updateUser'])->name('users.update');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
